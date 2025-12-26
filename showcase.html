@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="logo/favicon.svg">
     <title>DOUBLE D | Projects &amp; Case Studies</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <script src="https://unpkg.com/@rive-app/canvas@2.24.0"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
@@ -285,8 +287,8 @@
     <!-- Navigation (Consistent with Contact Page) -->
     <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/80 border-b border-white/5">
         <div class="flex h-16 max-w-7xl mr-auto ml-auto pr-6 pl-6 items-center justify-between">
-            <a href="#" class="flex items-center gap-2 group">
-                <img src="logo doubled.svg" alt="Double D Media"
+            <a href="index.html" class="flex items-center gap-2 group">
+                <img src="logo/logo doubled.svg" alt="Double D Media"
                     class="h-8 w-auto transition-opacity hover:opacity-80" />
             </a>
             <div
@@ -296,7 +298,7 @@
 
                 <a href="blog.html" class="hover:text-white transition-colors">BLOG</a>
             </div>
-            <a href="contact.html"
+            <a href="contact-us.html"
                 class="hidden md:flex items-center gap-2 text-[11px] uppercase hover:bg-neutral-200 transition-colors font-bold text-black tracking-tight bg-white rounded-sm pt-1.5 pr-4 pb-1.5 pl-4">
                 <span class="cursor-pointer" onclick="window.location.href='contact-us.html'" role="button">CONTACT
                     US</span>
@@ -347,66 +349,47 @@
                 class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center opacity-50 grayscale hover:grayscale-0 transition-all duration-700">
                 <!-- FPT -->
                 <div class="flex justify-center group">
-                    <div
-                        class="text-2xl font-bold font-geist tracking-tighter group-hover:text-[#f7941d] transition-colors flex items-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24"
-                            viewBox="0 0 24 24" data-icon="lucide:hexagon" data-width="24"
-                            class="iconify iconify--lucide">
-                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16">
-                            </path>
-                        </svg> FPT Corp
-                    </div>
+                    <img src="Logo%20Customer/fpt.png" alt="FPT Corp"
+                        class="h-10 w-auto object-contain transition-all duration-300 filter group-hover:brightness-110">
                 </div>
                 <!-- VNDIRECT -->
                 <div class="flex justify-center group">
-                    <div
-                        class="text-xl font-bold font-geist tracking-tight group-hover:text-[#f7941d] transition-colors flex items-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24"
-                            viewBox="0 0 24 24" data-icon="lucide:trending-up" data-width="24"
-                            class="iconify iconify--lucide">
-                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="2">
-                                <path d="M16 7h6v6"></path>
-                                <path d="m22 7l-8.5 8.5l-5-5L2 17"></path>
-                            </g>
-                        </svg> VNDIRECT
-                    </div>
+                    <img src="Logo%20Customer/vnd.png" alt="VNDIRECT"
+                        class="h-10 w-auto object-contain transition-all duration-300 filter group-hover:brightness-110">
                 </div>
                 <!-- KiotViet -->
                 <div class="flex justify-center group">
-                    <div
-                        class="text-xl font-bold font-geist tracking-tight group-hover:text-[#f7941d] transition-colors flex items-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24"
-                            viewBox="0 0 24 24" data-icon="lucide:store" data-width="24"
-                            class="iconify iconify--lucide">
-                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="2">
-                                <path
-                                    d="M15 21v-5a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v5m8.774-10.69a1.12 1.12 0 0 0-1.549 0a2.5 2.5 0 0 1-3.451 0a1.12 1.12 0 0 0-1.548 0a2.5 2.5 0 0 1-3.452 0a1.12 1.12 0 0 0-1.549 0a2.5 2.5 0 0 1-3.77-3.248l2.889-4.184A2 2 0 0 1 7 2h10a2 2 0 0 1 1.653.873l2.895 4.192a2.5 2.5 0 0 1-3.774 3.244">
-                                </path>
-                                <path d="M4 10.95V19a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8.05"></path>
-                            </g>
-                        </svg> KiotViet
-                    </div>
+                    <img src="Logo%20Customer/kiotviet.png" alt="KiotViet"
+                        class="h-10 w-auto object-contain transition-all duration-300 filter group-hover:brightness-110">
                 </div>
                 <!-- EduCampus -->
                 <div class="flex justify-center group">
-                    <div
-                        class="text-xl font-bold font-geist tracking-tight group-hover:text-[#f7941d] transition-colors flex items-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24"
-                            viewBox="0 0 24 24" data-icon="lucide:graduation-cap" data-width="24"
-                            class="iconify iconify--lucide">
-                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="2">
-                                <path
-                                    d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0zM22 10v6">
-                                </path>
-                                <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path>
-                            </g>
-                        </svg> EduCampus
-                    </div>
+                    <img src="Logo%20Customer/educampus.png" alt="EduCampus"
+                        class="h-10 w-auto object-contain transition-all duration-300 filter group-hover:brightness-110">
+                </div>
+
+                <!-- aka -->
+                <div class="flex justify-center group">
+                    <img src="Logo%20Customer/aka.png" alt="AKA"
+                        class="h-10 w-auto object-contain transition-all duration-300 filter group-hover:brightness-110">
+                </div>
+
+                <!-- hf -->
+                <div class="flex justify-center group">
+                    <img src="Logo%20Customer/hf.png" alt="HF"
+                        class="h-10 w-auto object-contain transition-all duration-300 filter group-hover:brightness-110">
+                </div>
+
+                <!-- pti -->
+                <div class="flex justify-center group">
+                    <img src="Logo%20Customer/pti.png" alt="PTI"
+                        class="h-10 w-auto object-contain transition-all duration-300 filter group-hover:brightness-110">
+                </div>
+
+                <!-- stringee -->
+                <div class="flex justify-center group">
+                    <img src="Logo%20Customer/stringee.png" alt="Stringee"
+                        class="h-10 w-auto object-contain transition-all duration-300 filter group-hover:brightness-110">
                 </div>
             </div>
         </section>
@@ -439,13 +422,10 @@
                     <div class="glass-panel p-2 rounded-xl overflow-hidden relative">
                         <!-- Abstract Thumbnail -->
                         <div class="h-64 md:h-80 w-full bg-neutral-900 rounded-lg overflow-hidden relative">
-                            <div class="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-black to-black z-10">
-                            </div>
-                            <div
-                                class="project-img absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&amp;w=2072&amp;auto=format&amp;fit=crop')] bg-cover bg-center opacity-60 transition-transform duration-700">
-                            </div>
+                            <canvas id="rive-canvas-fpt"
+                                class="project-img absolute inset-0 w-full h-full opacity-60 transition-transform duration-700 object-cover"></canvas>
                             <div class="absolute bottom-4 left-4 z-20 flex gap-2">
-                                <span class="tag tag-uiux">UI/UX Design</span>
+                                <span class="tag tag-uiux">Motion Graphic Design</span>
                                 <span class="tag tag-video">Video Production</span>
                             </div>
                         </div>
@@ -456,9 +436,10 @@
                                         Corporation</div>
                                     <h3
                                         class="text-xl text-white font-medium font-geist group-hover:text-blue-400 transition-colors">
-                                        Enterprise Digital Transformation</h3>
-                                    <p class="text-neutral-400 text-sm mt-2 line-clamp-2">A complete overhaul of the
-                                        internal dashboard system combined with a launch video campaign.</p>
+                                        Made by FIS (MBF) Product Package</h3>
+                                    <p class="text-neutral-400 text-sm mt-2 line-clamp-2">A powerful suite of solutions
+                                        designed to streamline operations, enhance customer engagement, and drive
+                                        business growth.</p>
                                 </div>
                                 <div
                                     class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-white arrow-icon transition-transform duration-300">
@@ -478,14 +459,11 @@
                 <article onclick="openCase('vndirect')" class="group project-card cursor-pointer">
                     <div class="glass-panel p-2 rounded-xl overflow-hidden relative">
                         <div class="h-64 md:h-80 w-full bg-neutral-900 rounded-lg overflow-hidden relative">
-                            <div class="absolute inset-0 bg-gradient-to-br from-orange-900/40 via-black to-black z-10">
-                            </div>
-                            <div
-                                class="project-img absolute inset-0 bg-[url('https://images.unsplash.com/photo-1611974765270-ca1258634369?q=80&amp;w=2064&amp;auto=format&amp;fit=crop')] bg-cover bg-center opacity-60 transition-transform duration-700">
-                            </div>
+                            <canvas id="rive-canvas-vnd"
+                                class="project-img absolute inset-0 w-full h-full opacity-60 transition-transform duration-700 object-cover"></canvas>
                             <div class="absolute bottom-4 left-4 z-20 flex gap-2">
-                                <span class="tag tag-interactive">Interactive Motion</span>
-                                <span class="tag tag-uiux">App Design</span>
+                                <span class="tag tag-interactive">Motion Graphic</span>
+                                <span class="tag tag-uiux">Video Explainer</span>
                             </div>
                         </div>
                         <div class="p-4">
@@ -495,9 +473,10 @@
                                         VNDIRECT</div>
                                     <h3
                                         class="text-xl text-white font-medium font-geist group-hover:text-[#f7941d] transition-colors">
-                                        Investment App Gamification</h3>
-                                    <p class="text-neutral-400 text-sm mt-2 line-clamp-2">Increasing user retention
-                                        through Rive interactive animations and a refreshed mobile UI.</p>
+                                        VNDIRECT Product Series</h3>
+                                    <p class="text-neutral-400 text-sm mt-2 line-clamp-2">Bringing value for
+                                        professionals, clients, partners and communities in the areas of Financial
+                                        health – Secured wealth – Sustainable development.</p>
                                 </div>
                                 <div
                                     class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-white arrow-icon transition-transform duration-300">
@@ -517,10 +496,9 @@
                 <article onclick="openCase('kiotviet')" class="group project-card cursor-pointer">
                     <div class="glass-panel p-2 rounded-xl overflow-hidden relative">
                         <div class="h-64 md:h-80 w-full bg-neutral-900 rounded-lg overflow-hidden relative">
-                            <div class="absolute inset-0 bg-gradient-to-br from-green-900/40 via-black to-black z-10">
-                            </div>
+
                             <div
-                                class="project-img absolute inset-0 bg-[url('https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?q=80&amp;w=2070&amp;auto=format&amp;fit=crop')] bg-cover bg-center opacity-60 transition-transform duration-700">
+                                class="project-img absolute inset-0 bg-[url('img/thumb%20web%205.png')] bg-cover bg-center opacity-60 transition-transform duration-700">
                             </div>
                             <div class="absolute bottom-4 left-4 z-20 flex gap-2">
                                 <span class="tag tag-marketing">Marketing Design</span>
@@ -555,14 +533,13 @@
                 <article onclick="openCase('educampus')" class="group project-card cursor-pointer">
                     <div class="glass-panel p-2 rounded-xl overflow-hidden relative">
                         <div class="h-64 md:h-80 w-full bg-neutral-900 rounded-lg overflow-hidden relative">
-                            <div class="absolute inset-0 bg-gradient-to-br from-purple-900/40 via-black to-black z-10">
-                            </div>
+
                             <div
-                                class="project-img absolute inset-0 bg-[url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&amp;w=2070&amp;auto=format&amp;fit=crop')] bg-cover bg-center opacity-60 transition-transform duration-700">
+                                class="project-img absolute inset-0 bg-[url('img/thumb%20web%203.png')] bg-cover bg-center opacity-60 transition-transform duration-700">
                             </div>
                             <div class="absolute bottom-4 left-4 z-20 flex gap-2">
                                 <span class="tag tag-uiux">Web Design</span>
-                                <span class="tag tag-video">Explainer</span>
+                                <span class="tag tag-marketing">Video Intro Motion</span>
                             </div>
                         </div>
                         <div class="p-4">
@@ -677,7 +654,9 @@
             <div class="flex-1 overflow-y-auto p-0 bg-[#050505]">
 
                 <!-- Hero Image in Modal -->
-                <div id="modalHeroImg" class="w-full h-64 md:h-80 bg-neutral-800 bg-cover bg-center"></div>
+                <div id="modalHeroImg" class="w-full aspect-video bg-neutral-800 bg-cover bg-center relative">
+                    <canvas id="modal-rive-canvas" class="hidden absolute inset-0 w-full h-full object-cover"></canvas>
+                </div>
 
                 <div class="p-6 md:p-10 grid grid-cols-1 md:grid-cols-12 gap-10">
 
@@ -730,7 +709,7 @@
                             </p>
                         </div>
 
-                        <!-- Gallery Grid (Placeholder) -->
+                        <!-- Gallery Grid (Placeholder) x
                         <div class="grid grid-cols-2 gap-4">
                             <div
                                 class="aspect-video bg-neutral-900 rounded border border-white/5 flex items-center justify-center text-neutral-700">
@@ -758,7 +737,7 @@
                                     </g>
                                 </svg>
                             </div>
-                        </div>
+                        </div> -->
 
                         <!-- Result -->
                         <div>
@@ -777,11 +756,10 @@
 
             <!-- Modal Footer -->
             <div class="p-6 border-t border-white/5 bg-[#050505] flex justify-end">
-                <a href="contact.html"
+                <a id="modalLink" href="article.html"
                     class="text-xs font-bold uppercase tracking-widest text-white hover:text-[#f7941d] transition-colors flex items-center gap-2">
-                    Start a project like this <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img"
-                        width="1em" height="1em" viewBox="0 0 24 24" data-icon="lucide:arrow-right"
-                        class="iconify iconify--lucide">
+                    Show more <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em"
+                        height="1em" viewBox="0 0 24 24" data-icon="lucide:arrow-right" class="iconify iconify--lucide">
                         <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                             stroke-width="2" d="M5 12h14m-7-7l7 7l-7 7"></path>
                     </svg>
@@ -797,12 +775,19 @@
             'fpt': {
                 client: 'FPT Corporation',
                 industry: 'Technology / Enterprise',
-                title: 'Enterprise Digital Transformation',
-                services: ['UI/UX Design', 'Video Production', 'System Design'],
-                timeline: '4 Months',
+                title: 'Made by FIS (MBF) Product Package',
+                services: ['UI/UX Design', 'Video Production', 'Motion Design'],
+                timeline: '6 Months',
                 kpiValue: '10k+',
                 kpiLabel: 'Daily Active Users',
-                heroImg: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop',
+                url: 'MBF show.html',
+                rive: {
+                    src: 'Rive file/mbf.riv',
+                    artboard: 'Main 2',
+                    stateMachines: 'State Machine 1'
+                },
+                heroImg: 'img/thumb web 1.png',
+
                 challenge: 'FPT required a complete overhaul of their internal dashboard system. The legacy system was slow, unintuitive, and caused friction in daily operations for thousands of employees.',
                 solution: 'Double D focused on a "function-first" UI/UX approach. We simplified complex data flows into a clean, dark-mode interface and produced a high-energy launch video to onboard staff.',
                 result: 'The new system reduced task completion time by 30%. The launch video generated high internal morale, leading to a smooth transition period across the corporation.'
@@ -814,8 +799,16 @@
                 services: ['Interactive Motion', 'App Design', 'Rive Animation'],
                 timeline: '3 Months',
                 kpiValue: '+22%',
+                kpiValue: '+22%',
                 kpiLabel: 'User Retention Rate',
-                heroImg: 'https://images.unsplash.com/photo-1611974765270-ca1258634369?q=80&w=2064&auto=format&fit=crop',
+                url: 'VNDIRECT blog.html',
+                rive: {
+                    src: 'Rive file/thap_tai_san.riv',
+                    artboard: 'thap tai san',
+                    stateMachines: 'State Machine 1',
+                    aspectRatio: '16/9',
+                },
+
                 challenge: 'Young investors found the existing trading app intimidating and dry. VNDIRECT wanted to make investment feel more accessible and engaging without losing credibility.',
                 solution: 'We integrated Rive interactive animations for success states, loading screens, and onboarding. The UI was refreshed with cleaner typography (Inter) and softer gradients.',
                 result: 'User retention spiked by 22% in the first quarter. Feedback highlighted the "delightful" interactions as a key differentiator from competitors.'
@@ -828,7 +821,8 @@
                 timeline: '2 Months',
                 kpiValue: '2.5M',
                 kpiLabel: 'Campaign Reach',
-                heroImg: 'https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?q=80&w=2070&auto=format&fit=crop',
+                url: 'blog.html',
+                heroImg: 'img/thumb web 5.png',
                 challenge: 'KiotViet needed to penetrate a new segment of Gen Z business owners who viewed POS software as "old fashioned".',
                 solution: 'We developed a vibrant, high-contrast Key Visual style using bold colors and geometric shapes. The campaign assets were optimized for TikTok and Instagram Reels.',
                 result: 'The campaign reached 2.5 million users. Brand sentiment among the 18-25 demographic shifted positively, driving a significant increase in trial sign-ups.'
@@ -841,7 +835,8 @@
                 timeline: '6 Weeks',
                 kpiValue: '3x',
                 kpiLabel: 'Lead Conversion',
-                heroImg: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070&auto=format&fit=crop',
+                url: 'blog.html',
+                heroImg: 'img/thumb web 3.png',
                 challenge: 'EduCampus struggled to convey their hybrid learning model. Their previous website was text-heavy and failed to capture the innovation of their curriculum.',
                 solution: 'Double D built a futuristic, scroll-driven website experience using WebGL elements. We also produced a 60s explainer video clarifying the hybrid model.',
                 result: 'Enrollment inquiries tripled in the first month post-launch. The website won an honorable mention on Awwwards for its unique navigation.'
@@ -849,6 +844,7 @@
         };
 
         const modal = document.getElementById('caseModal');
+        let modalRiveInstance = null;
 
         function openCase(id) {
             const data = cases[id];
@@ -864,9 +860,41 @@
             document.getElementById('modalChallenge').innerText = data.challenge;
             document.getElementById('modalSolution').innerText = data.solution;
             document.getElementById('modalResult').innerText = data.result;
+            document.getElementById('modalLink').href = data.url || 'article.html';
 
-            // Image
-            document.getElementById('modalHeroImg').style.backgroundImage = `url('${data.heroImg}')`;
+            // Image & Rive
+            const heroImg = document.getElementById('modalHeroImg');
+            const riveCanvas = document.getElementById('modal-rive-canvas');
+
+            // Cleanup previous instance
+            if (modalRiveInstance) {
+                modalRiveInstance.cleanup();
+                modalRiveInstance = null;
+            }
+
+            if (data.rive) {
+                heroImg.style.backgroundImage = 'none';
+                riveCanvas.classList.remove('hidden');
+
+                modalRiveInstance = new rive.Rive({
+                    src: data.rive.src,
+                    canvas: riveCanvas,
+                    autoplay: true,
+                    autoBind: true,
+                    artboard: data.rive.artboard,
+                    stateMachines: data.rive.stateMachines,
+                    layout: new rive.Layout({
+                        fit: rive.Fit.Cover,
+                        alignment: rive.Alignment.Center,
+                    }),
+                    onLoad: () => {
+                        modalRiveInstance.resizeDrawingSurfaceToCanvas();
+                    }
+                });
+            } else {
+                riveCanvas.classList.add('hidden');
+                heroImg.style.backgroundImage = `url('${data.heroImg}')`;
+            }
 
             // Tags
             const tagContainer = document.getElementById('modalServices');
@@ -888,6 +916,10 @@
         }
 
         function closeModal() {
+            if (modalRiveInstance) {
+                modalRiveInstance.cleanup();
+                modalRiveInstance = null;
+            }
             modal.classList.remove('open');
             setTimeout(() => {
                 modal.classList.add('hidden');
@@ -896,7 +928,42 @@
         }
 
         // Initialize modal hidden
+        modal.classList.remove('hidden'); // Remove hidden first to compute styles if needed, but we used opacity logic. 
+        // Actually, the logic above adds 'hidden' initially. Let's keep it consistent.
         modal.classList.add('hidden');
+
+        // Initialize Rive Animation for FPT Case
+        const r_fpt = new rive.Rive({
+            src: 'Rive file/mbf.riv',
+            canvas: document.getElementById('rive-canvas-fpt'),
+            autoplay: true,
+            artboard: 'Main',
+            stateMachines: 'State Machine 1',
+            layout: new rive.Layout({
+                fit: rive.Fit.Cover,
+                alignment: rive.Alignment.Center,
+            }),
+            onLoad: () => {
+                r_fpt.resizeDrawingSurfaceToCanvas();
+            },
+        });
+
+        // Initialize Rive Animation for VNDIRECT Case
+        const r_vnd = new rive.Rive({
+            src: 'Rive file/thap_tai_san.riv',
+            canvas: document.getElementById('rive-canvas-vnd'),
+            artboard: 'thap tai san',
+            autoplay: true,
+            autoBind: true,
+            stateMachines: 'State Machine 1',
+            layout: new rive.Layout({
+                fit: rive.Fit.Cover,
+                alignment: rive.Alignment.Center,
+            }),
+            onLoad: () => {
+                r_vnd.resizeDrawingSurfaceToCanvas();
+            },
+        });
     </script>
 
 </body>

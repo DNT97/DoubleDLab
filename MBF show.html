@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="logo/favicon.svg">
-    <title>DOUBLE D | Case Study: FPT Interface</title>
+    <title>DOUBLE D | Case Study: UI Workflow</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
         rel="stylesheet">
+    <script src="https://unpkg.com/@rive-app/canvas@latest"></script>
     <style>
         /* --- Core Theme & Background --- */
         body {
@@ -153,24 +154,23 @@
             <div class="flex items-center gap-2 text-[11px] uppercase tracking-widest text-[#f7941d] font-mono mb-6">
                 <a href="showcase.html" class="hover:text-white transition-colors">Showcase</a>
                 <span class="text-neutral-600">/</span>
-                <span class="text-neutral-400">Finance</span>
+                <span class="text-neutral-400">Workflow</span>
             </div>
 
             <!-- Title & Description -->
             <h1 class="text-4xl md:text-6xl font-bold tracking-tighter text-white mb-6 font-geist leading-[1.1]">
-                Redefining the FPT Digital Banking Experience
+                Video sản phẩm MBF – Khi công nghệ được kể bằng hình ảnh
             </h1>
-            <p class="text-neutral-400 text-lg md:text-xl font-light leading-relaxed max-w-3xl mb-8">
-                How we utilized Rive technology and a component-driven design system to increase user engagement by 40%
-                in Q3.
-            </p>
+            Trong kỷ nguyên số, sản phẩm công nghệ ngày càng mạnh mẽ nhưng cũng ngày càng phức tạp. Với Made by FPT
+            IS (MBF), câu hỏi không chỉ là xây dựng được gì, mà là làm thế nào để khách hàng hiểu được giá trị đó
+            một cách nhanh chóng và trực quan nhất. Video sản phẩm chính là câu trả lời.
 
             <!-- Article Meta Data -->
             <div class="flex flex-wrap items-center gap-6 text-sm text-neutral-400 border-t border-white/10 pt-6">
                 <div class="flex items-center gap-3">
                     <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&amp;q=80" alt="Author"
                         class="w-8 h-8 rounded-full border border-white/10 object-cover">
-                    <span class="text-white font-medium">Alex Morgan</span>
+                    <span class="text-white font-medium">DNT</span>
                 </div>
                 <div class="flex items-center gap-2">
                     <span class="iconify iconify--lucide" data-icon="lucide:calendar" width="14" height="14"></span>
@@ -194,11 +194,12 @@
     <!-- MAIN CONTENT LAYOUT -->
     <main class="max-w-7xl mx-auto px-6 py-12">
 
-        <!-- Hero Image -->
-        <div class="relative w-full aspect-[21/9] rounded-lg overflow-hidden border border-white/10 mb-16 group">
-            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1600&amp;q=80"
-                alt="FPT Interface Showcase" class="absolute inset-0 w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60">
+        <!-- Hero Image / Rive Animation -->
+        <div
+            class="relative w-full aspect-[21/9] rounded-lg overflow-hidden border border-white/10 mb-16 group bg-[#050505]">
+            <canvas id="rive-canvas" class="w-full h-full"></canvas>
+            <div
+                class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 pointer-events-none">
             </div>
         </div>
 
@@ -207,70 +208,166 @@
             <!-- LEFT COLUMN: ARTICLE CONTENT (CMS) -->
             <article class="lg:col-span-8 article-content">
 
-                <h2 id="introduction">The Challenge</h2>
+                <h2 id="introduction">Vì sao MBF đầu tư nghiêm túc vào video sản phẩm?</h2>
                 <p>
-                    Financial applications often suffer from data density overload. Users are presented with tables,
-                    charts, and transaction histories that are functional but visually fatiguing. FPT approached Double
-                    D Media with a clear directive: make the complex feel simple, and make the static feel alive.
-                </p>
-                <p>
-                    The legacy system was built on a fragmented codebase where design updates took weeks to propagate.
-                    Our audit revealed inconsistency in typography, color usage, and interaction patterns across the
-                    mobile and web platforms.
+                    Khác với các ngành tiêu dùng, sản phẩm công nghệ thường khó “nhìn thấy” bằng mắt thường. Những khái
+                    niệm như tự động hóa, dữ liệu, AI hay ESG nếu chỉ thể hiện bằng chữ và sơ đồ kỹ thuật sẽ rất khó
+                    tiếp cận với người dùng cuối.
                 </p>
 
-                <h2 id="design-system">Building the System</h2>
-                <p>
-                    We started by establishing a core design language we called "Flux". Central to Flux was the idea
-                    that financial data flows—it doesn't just sit there. We utilized <span
-                        class="text-white font-medium">Tailwind CSS</span> for rapid utility-first styling and created a
-                    unified component library.
-                </p>
-
-                <!-- Embedded Image/Media in Content -->
-                <figure class="my-10">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&amp;q=80"
-                        alt="Design System Grid" class="w-full rounded border border-white/10">
-                    <figcaption class="text-center text-xs text-neutral-500 mt-3 font-mono">Figure 1: The 'Flux'
-                        Component Library Structure</figcaption>
-                </figure>
-
-                <h3 id="typography">Typography &amp; Hierarchy</h3>
-                <p>
-                    Readability is paramount in fintech. We opted for <strong>Geist</strong> for headers to provide a
-                    modern, technical feel, paired with <strong>Inter</strong> for UI elements to ensure legibility at
-                    small sizes. By strictly defining line-heights and tracking, we reduced cognitive load
-                    significantly.
-                </p>
-
-                <blockquote class="text-lg">
-                    "Double D Media didn't just skin our app; they re-architected how our users perceive their own
-                    wealth. The motion design is subtle but effectively guides attention."
-                    <footer class="text-sm text-neutral-500 mt-2 not-italic">— CTO, FPT Digital</footer>
-                </blockquote>
-
-                <h2 id="implementation">Motion with Rive</h2>
-                <p>
-                    Static icons were replaced with state-driven Rive animations. When a user completes a transaction,
-                    the success state isn't just a green checkmark; it's a fluid animation that reinforces the feeling
-                    of completion. Because Rive runs on a vector runtime, these assets are 90% smaller than Lottie files
-                    and run at 60fps on low-end devices.
-                </p>
-
-                <ul class="list-disc pl-5 space-y-2 text-neutral-300">
-                    <li><strong class="text-white">Performance:</strong> Reduced bundle size by 140kb.</li>
-                    <li><strong class="text-white">Engagement:</strong> 40% increase in "Savings Goal" interactions.
-                    </li>
-                    <li><strong class="text-white">Consistency:</strong> Single animation source for iOS, Android, and
-                        Web.</li>
+                <p>Video giúp MBF:</p>
+                <ul>
+                    <li>Chuyển hóa công nghệ phức tạp thành câu chuyện dễ hiểu</li>
+                    <li>Rút ngắn thời gian tiếp cận sản phẩm của khách hàng</li>
+                    <li>Đồng bộ thông điệp sản phẩm trên nhiều kênh truyền thông và bán hàng</li>
+                    <li>Nâng cao hình ảnh chuyên nghiệp của các sản phẩm “Made by FPT IS”</li>
                 </ul>
 
-                <h2 id="conclusion">The Outcome</h2>
-                <p>
-                    The new interface launched in Q3 2024. Within the first month, user retention increased, and support
-                    tickets regarding "navigation confusion" dropped by 22%. This project stands as a testament to the
-                    power of combining rigorous design systems with playful, purposeful motion.
-                </p>
+                <p>Với MBF, video không chỉ là công cụ marketing, mà là một phần trong hành trình đưa sản phẩm ra thị
+                    trường.</p>
+
+                <h2 id="ecosystem">Tổng quan hệ sinh thái video sản phẩm MBF</h2>
+                <p>Hệ sinh thái sản phẩm của MBF trải rộng trên nhiều lĩnh vực như:</p>
+                <ul>
+                    <li>Business Process Transformation</li>
+                    <li>Business Technology Platform</li>
+                    <li>Financial Management</li>
+                    <li>Human Capital Management</li>
+                    <li>Sustainability & ESG</li>
+                    <li>Data, AI, Security…</li>
+                </ul>
+
+                <p>Tương ứng với đó, video sản phẩm được xây dựng để phục vụ nhiều mục đích khác nhau:</p>
+                <ul>
+                    <li>Giới thiệu tổng quan sản phẩm trên website</li>
+                    <li>Hỗ trợ đội ngũ sales và presales</li>
+                    <li>Trình chiếu tại sự kiện, hội thảo, triển lãm</li>
+                    <li>Truyền thông nội bộ và đối tác</li>
+                </ul>
+
+                <h2 id="categories">Các nhóm video sản phẩm tiêu biểu của MBF</h2>
+
+                <h3 id="intro-video">Video giới thiệu sản phẩm (Product Introduction Video)</h3>
+                <p>Đây là dạng video phổ biến nhất trong hệ sinh thái MBF. Nội dung tập trung trả lời các câu hỏi cốt
+                    lõi:</p>
+                <ul>
+                    <li>Sản phẩm là gì?</li>
+                    <li>Giải quyết bài toán nào cho doanh nghiệp?</li>
+                    <li>Giá trị nổi bật là gì?</li>
+                </ul>
+                <p>Video thường có thời lượng ngắn, sử dụng motion graphic kết hợp hình ảnh giao diện sản phẩm để giúp
+                    người xem nắm bắt nhanh chỉ trong vài phút.</p>
+
+                <!-- 2x2 Video Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-12">
+                    <div class="aspect-video rounded-lg overflow-hidden border border-white/10 bg-neutral-900">
+                        <iframe class="w-full h-full"
+                            src="https://www.youtube.com/embed/hhQXb0ax4Uk?si=awkBNJpIScvYc75p"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="aspect-video rounded-lg overflow-hidden border border-white/10 bg-neutral-900">
+                        <iframe class="w-full h-full"
+                            src="https://www.youtube.com/embed/57QKK0S8CSM?si=zZ3ISkROu9s-1TB-"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="aspect-video rounded-lg overflow-hidden border border-white/10 bg-neutral-900">
+                        <iframe class="w-full h-full"
+                            src="https://www.youtube.com/embed/O0uQLTQIep0?si=VZ_JQWs0thpyC1T_"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="aspect-video rounded-lg overflow-hidden border border-white/10 bg-neutral-900">
+                        <iframe class="w-full h-full"
+                            src="https://www.youtube.com/embed/TIGLtMJbzpw?si=66y588kAJMsBNepS"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <h3 id="solution-video">Video giải pháp theo ngành và nghiệp vụ</h3>
+                <p>Thay vì nói về tính năng, nhóm video này đặt sản phẩm vào bối cảnh thực tế của từng ngành như tài
+                    chính – ngân hàng, sản xuất, chính phủ hay doanh nghiệp lớn.</p>
+
+                <blockquote>
+                    Câu chuyện được xây dựng theo mạch: bài toán thực tế → giải pháp của MBF → giá trị mang lại.
+                </blockquote>
+                <p>Cách tiếp cận này giúp khách hàng dễ dàng nhìn thấy sự phù hợp của sản phẩm với chính nhu cầu của
+                    mình.</p>
+
+                <div class="aspect-video rounded-lg overflow-hidden border border-white/10 bg-neutral-900 my-12">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/YqpyinjApN4?si=st0MrqXumnBBbU3O"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+
+                <h3 id="motion-video">Video motion graphic & explainer</h3>
+                <p>Với các sản phẩm liên quan đến công nghệ lõi như AI, RPA, dữ liệu hay ESG, MBF sử dụng video motion
+                    graphic để “dịch” các khái niệm kỹ thuật sang ngôn ngữ hình ảnh.</p>
+                <p>Thông qua đồ họa, biểu tượng và chuyển động, video explainer giúp:</p>
+                <ul>
+                    <li>Người không chuyên cũng có thể hiểu nội dung</li>
+                    <li>Thông điệp được truyền tải ngắn gọn, mạch lạc</li>
+                    <li>Tăng khả năng ghi nhớ thương hiệu và sản phẩm</li>
+                </ul>
+
+                <div class="aspect-video rounded-lg overflow-hidden border border-white/10 bg-neutral-900 my-12">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/O0uQLTQIep0?si=a2ptUsyrg0lSG5nx"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+
+                <h3 id="demo-video">Video demo & walkthrough sản phẩm</h3>
+                <p>Đây là nhóm video tập trung vào trải nghiệm người dùng, mô phỏng các luồng thao tác thực tế trên hệ
+                    thống. Video demo thường được sử dụng trong giai đoạn khách hàng tìm hiểu sâu, giúp họ hình dung rõ
+                    cách sản phẩm vận hành và giá trị mang lại trong thực tế.</p>
+
+                <div class="aspect-video rounded-lg overflow-hidden border border-white/10 bg-neutral-900 my-12">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/plBeuE9L3zg?si=GM6mZ1vVixzEdzef"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+
+                <h2 id="difference">Điểm khác biệt trong cách MBF làm video sản phẩm</h2>
+                <p>Điểm chung của các video MBF không nằm ở hiệu ứng phô trương, mà ở sự bám sát thực tế sản phẩm. Nội
+                    dung video được xây dựng dựa trên sự phối hợp chặt chẽ giữa đội ngũ sản phẩm, kinh doanh và truyền
+                    thông, đảm bảo:</p>
+                <ul>
+                    <li>Thông tin chính xác, không “đánh bóng” quá mức</li>
+                    <li>Thông điệp nhất quán với định vị sản phẩm</li>
+                    <li>Video thực sự hỗ trợ bán hàng và truyền thông, không chỉ để “xem cho đẹp”</li>
+                </ul>
+
+                <div class="aspect-video rounded-lg overflow-hidden border border-white/10 bg-neutral-900 my-12">
+                    <canvas id="rive-brochure" class="w-full h-full"></canvas>
+                </div>
+
+                <h2 id="value">Giá trị mà video sản phẩm mang lại</h2>
+                <p>Việc đầu tư bài bản vào video sản phẩm giúp MBF và khách hàng:</p>
+                <ul>
+                    <li>Rút ngắn thời gian giới thiệu và đào tạo sản phẩm</li>
+                    <li>Tăng hiệu quả truyền thông đa kênh</li>
+                    <li>Nâng cao trải nghiệm tiếp cận sản phẩm của khách hàng</li>
+                    <li>Góp phần xây dựng hình ảnh chuyên nghiệp cho hệ sinh thái Made by FPT IS</li>
+                </ul>
+
+                <h2 id="future">Định hướng phát triển</h2>
+                <p>Trong thời gian tới, MBF tiếp tục phát triển video sản phẩm theo hướng cá nhân hóa nội dung theo từng
+                    ngành, tăng tính tương tác và kết hợp video với các nền tảng digital như website, landing page và sự
+                    kiện trực tuyến.</p>
+
+                <h2 id="conclusion">Kết luận</h2>
+                <p>Với Made by FPT IS, video không đơn thuần là hình ảnh chuyển động. Đó là cầu nối giữa công nghệ và
+                    con người, giữa sản phẩm và nhu cầu thực tế của doanh nghiệp. Thông qua video, MBF kể câu chuyện sản
+                    phẩm một cách rõ ràng, trực quan và gần gũi hơn – đúng với tinh thần “Make technology matter”.</p>
 
                 <!-- Article Footer / Author Bio -->
                 <div class="mt-16 pt-8 border-t border-white/10">
@@ -278,11 +375,11 @@
                         <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&amp;q=80"
                             alt="Author" class="w-12 h-12 rounded-full border border-white/10 object-cover">
                         <div>
-                            <h4 class="text-white font-bold text-sm uppercase tracking-wide">Alex Morgan</h4>
-                            <p class="text-neutral-500 text-xs uppercase tracking-widest mb-2">Lead Product Designer</p>
+                            <h4 class="text-white font-bold text-sm uppercase tracking-wide">DNT</h4>
+                            <p class="text-neutral-500 text-xs uppercase tracking-widest mb-2">Lead Producer</p>
                             <p class="text-neutral-400 text-sm max-w-md leading-relaxed">
-                                Specializes in complex system architecture and motion design. passionate about making
-                                fintech accessible through cleaner UI.
+                                Chuyên gia sản xuất nội dung số và video marketing cho các sản phẩm công nghệ
+                                Enterprise.
                             </p>
                         </div>
                     </div>
@@ -301,23 +398,23 @@
                         <nav class="flex flex-col space-y-3">
                             <a href="#introduction"
                                 class="text-sm text-neutral-300 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center gap-2">
-                                <span class="w-1 h-1 bg-neutral-600 rounded-full"></span> The Challenge
+                                <span class="w-1 h-1 bg-neutral-600 rounded-full"></span> Tại sao chọn video?
                             </a>
-                            <a href="#design-system"
+                            <a href="#ecosystem"
                                 class="text-sm text-neutral-300 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center gap-2">
-                                <span class="w-1 h-1 bg-neutral-600 rounded-full"></span> Building the System
+                                <span class="w-1 h-1 bg-neutral-600 rounded-full"></span> Hệ sinh thái MBF
                             </a>
-                            <a href="#typography"
-                                class="text-sm text-neutral-400 hover:text-white hover:translate-x-1 transition-all duration-200 pl-4">
-                                Typography &amp; Hierarchy
-                            </a>
-                            <a href="#implementation"
+                            <a href="#categories"
                                 class="text-sm text-neutral-300 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center gap-2">
-                                <span class="w-1 h-1 bg-neutral-600 rounded-full"></span> Motion with Rive
+                                <span class="w-1 h-1 bg-neutral-600 rounded-full"></span> Các nhóm video tiêu biểu
                             </a>
-                            <a href="#conclusion"
+                            <a href="#difference"
                                 class="text-sm text-neutral-300 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center gap-2">
-                                <span class="w-1 h-1 bg-neutral-600 rounded-full"></span> The Outcome
+                                <span class="w-1 h-1 bg-neutral-600 rounded-full"></span> Điểm khác biệt
+                            </a>
+                            <a href="#value"
+                                class="text-sm text-neutral-300 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center gap-2">
+                                <span class="w-1 h-1 bg-neutral-600 rounded-full"></span> Giá trị mang lại
                             </a>
                         </nav>
                     </div>
@@ -329,15 +426,15 @@
                             Details</span>
                         <div class="space-y-4 mb-6">
                             <div>
-                                <span class="text-xs text-neutral-500 block">Client</span>
-                                <span class="text-sm text-white font-medium">FPT Corporation</span>
+                                <span class="text-xs text-neutral-500 block">Khách hàng</span>
+                                <span class="text-sm text-white font-medium">FPT Information System</span>
                             </div>
                             <div>
-                                <span class="text-xs text-neutral-500 block">Services</span>
-                                <span class="text-sm text-white font-medium">UI/UX, Design System, Motion</span>
+                                <span class="text-xs text-neutral-500 block">Dịch vụ</span>
+                                <span class="text-sm text-white font-medium">Video Production, Motion Graphic</span>
                             </div>
                             <div>
-                                <span class="text-xs text-neutral-500 block">Year</span>
+                                <span class="text-xs text-neutral-500 block">Năm</span>
                                 <span class="text-sm text-white font-medium">2024</span>
                             </div>
                         </div>
@@ -463,6 +560,31 @@
         </div>
     </footer>
 
+
+    <script>
+        const r = new rive.Rive({
+            src: 'Rive file/mbf.riv',
+            canvas: document.getElementById('rive-canvas'),
+            artboard: 'Main 2',
+            stateMachines: 'State Machine 1',
+            autoplay: true,
+            onLoad: () => {
+                r.resizeDrawingSurfaceToCanvas();
+            },
+        });
+
+        const r2 = new rive.Rive({
+            src: 'Rive file/brochure_vertzero.riv',
+            canvas: document.getElementById('rive-brochure'),
+            artboard: 'Main',
+            autoplay: true,
+            stateMachines: 'State Machine 1',
+            autoBind: true,
+            onLoad: () => {
+                r2.resizeDrawingSurfaceToCanvas();
+            },
+        });
+    </script>
 </body>
 
 </html>

@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="logo/favicon.svg">
     <title>DOUBLE D | Journal</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
@@ -223,8 +224,8 @@
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/80 border-b border-white/5">
         <div class="flex h-16 max-w-7xl mr-auto ml-auto pr-6 pl-6 items-center justify-between">
-            <a href="#" class="flex items-center gap-2 group">
-                <img src="logo doubled.svg" alt="Double D Media"
+            <a href="index.html" class="flex items-center gap-2 group">
+                <img src="logo/logo doubled.svg" alt="Double D Media"
                     class="h-8 w-auto transition-opacity hover:opacity-80" />
             </a>
             <div
@@ -244,6 +245,38 @@
                         stroke-width="2" d="M5 12h14m-7-7 7 7-7 7"></path>
                 </svg>
             </a>
+            <button id="mobile-menu-btn" class="md:hidden text-white p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu"
+            class="fixed inset-0 z-[60] bg-black/95 backdrop-blur-xl hidden flex flex-col items-center justify-center space-y-8 opacity-0 transition-opacity duration-300">
+            <button id="close-menu-btn" class="absolute top-6 right-6 text-white p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+
+            <a href="index.html"
+                class="text-2xl font-bold text-white uppercase tracking-widest hover:text-[#f7941d] transition-colors">Home</a>
+            <a href="our-services.html"
+                class="text-2xl font-bold text-white uppercase tracking-widest hover:text-[#f7941d] transition-colors">Our
+                Services</a>
+            <a href="showcase.html"
+                class="text-2xl font-bold text-white uppercase tracking-widest hover:text-[#f7941d] transition-colors">Showcase</a>
+            <a href="blog.html" class="text-2xl font-bold text-[#f7941d] uppercase tracking-widest">Blog</a>
+            <a href="contact-us.html"
+                class="text-2xl font-bold text-white uppercase tracking-widest hover:text-[#f7941d] transition-colors">Contact
+                Us</a>
         </div>
     </nav>
 
@@ -270,10 +303,9 @@
             <div class="lg:col-span-8 group cursor-pointer relative">
                 <!-- Image Container -->
                 <div class="relative w-full aspect-[16/10] overflow-hidden rounded-lg border border-white/10">
-                    <img src="https://images.unsplash.com/photo-1634942537034-2531766767d1?w=1600&amp;q=80"
-                        alt="Featured Article"
+                    <img src="Img/thumb web 1.png" alt="Featured Article"
                         class="transition-transform duration-700 group-hover:scale-105 group-hover:opacity-100 opacity-80 w-full h-full object-cover absolute top-0 right-0 bottom-0 left-0 cursor-pointer"
-                        onclick="window.location.href='article.html'" role="button">
+                        onclick="window.location.href='blog 1.html'" role="button">
 
                     <!-- Play Icon (Top Right) -->
                     <div
@@ -290,11 +322,11 @@
                         <span class="text-[10px] font-mono uppercase tracking-widest text-[#f7941d] mb-3 block">Just The
                             Facts</span>
                         <h2 class="leading-tight text-3xl font-semibold text-white tracking-tight mb-3 cursor-pointer"
-                            onclick="window.location.href='article.html'" role="button">
-                            Design systems save time. Don't cut them.
+                            onclick="window.location.href='blog 1.html'" role="button">
+                            Motion design isn’t just eye candy; <br> it’s UX infrastructure
                         </h2>
                         <p class="text-neutral-300 font-light text-sm">
-                            Here's the proof we're showing enterprise clients about scalability and consistency.
+                            A deep dive into how motion design strengthens your entire user experience
                         </p>
                     </div>
                 </div>
@@ -310,11 +342,11 @@
                         class="text-[10px] font-mono uppercase tracking-widest text-neutral-500 mb-3 block group-hover:text-[#f7941d] transition-colors">Everyday
                         Miracles</span>
                     <h3 class="text-2xl font-semibold text-white tracking-tight mb-3 group-hover:text-neutral-200">
-                        A perilous time for the world's digital privacy
+                        Why Motion is the Future of Brand Identity
                     </h3>
                     <p class="text-neutral-400 font-light text-sm leading-relaxed">
-                        My latest speech about why we need to keep funding open source encryption protocols for a safer
-                        web.
+                        Andrew Vucko, founder and ECD of Vucko, explains how motion can transform static identities into
+                        living ones fit for the 21st century.
                     </p>
                 </article>
 
@@ -322,20 +354,11 @@
                 <article class="play-btn-group cursor-pointer relative">
                     <div class="relative w-full aspect-video rounded-lg overflow-hidden border border-white/10">
                         <!-- Video Thumbnail/Embed -->
-                        <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/917d6f93-fb36-439a-8c48-884b67b35381_1600w.jpg"
-                            class="w-full h-full object-cover opacity-70" alt="Video Thumb">
-
-                        <!-- Overlay Color Block (Right Side Style) -->
-                        <div
-                            class="absolute top-0 bottom-0 right-0 w-1/4 bg-[#f7941d]/90 backdrop-blur-sm flex items-center justify-center">
-                            <div
-                                class="play-icon w-10 h-10 bg-white rounded-full flex items-center justify-center text-[#f7941d] transition-transform duration-300">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                    fill="currentColor" stroke="none" class="ml-0.5">
-                                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                                </svg>
-                            </div>
-                        </div>
+                        <iframe class="w-full h-full"
+                            src="https://www.youtube.com/embed/mMpik32gkt4?si=teiOxEGwn6MuIwyZ"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                     <div class="mt-4">
                         <span class="text-[10px] font-mono uppercase tracking-widest text-neutral-500">Video •
@@ -358,18 +381,16 @@
                     <span class="text-[10px] font-mono uppercase tracking-widest text-neutral-500 mb-3 block">My Look
                         Back</span>
                     <h3 class="group-hover:underline decoration-1 underline-offset-4 decoration-[#f7941d] text-2xl font-semibold text-white tracking-tight mb-4"
-                        onclick="window.location.href='blog.html'" role="button">
-                        The breakthrough that transformed our UI workflow
+                        onclick="window.location.href='the-breakthrough.html'" role="button">
+                        The 9 best interactive 404 page examples
                     </h3>
                     <p class="text-neutral-400 font-light text-sm leading-relaxed mb-8">
-                        This is the story of how better component data helped us cut development time in half while
-                        improving fidelity.
+                        Error pages don’t have to be boring. Make your brand stand out by building them with Rive.
                     </p>
                 </div>
                 <!-- Image at Bottom -->
                 <div class="relative w-full aspect-video rounded-lg overflow-hidden border border-white/10">
-                    <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/4734259a-bad7-422f-981e-ce01e79184f2_1600w.jpg"
-                        alt="Abstract Data"
+                    <img src="Img/blog.avif" alt="Abstract Data"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100">
                 </div>
             </article>
@@ -383,16 +404,17 @@
                         Ahead</span>
                     <h3
                         class="text-2xl font-semibold text-white tracking-tight mb-4 group-hover:underline decoration-1 underline-offset-4 decoration-[#f7941d]">
-                        What it takes to take a breath in a busy startup
+                        A Complete Guide for Video Production Process for B2B SaaS
                     </h3>
                     <p class="text-neutral-400 font-light text-sm leading-relaxed mb-8">
-                        New tools can help millions more creatives—and their managers—survive the crunch time season.
+                        Videos can range from product explainers to live commerce to POV style unboxing videos. But a
+                        successful video project is the one that feels personalized and localized.
                     </p>
                 </div>
                 <!-- Video Embed Wrapper -->
                 <div
                     class="relative w-full aspect-video rounded-lg overflow-hidden border border-white/10 bg-black group-hover:border-[#f7941d]/50 transition-colors">
-                    <iframe src="https://player.vimeo.com/video/375468729?background=1"
+                    <iframe src="https://player.vimeo.com/video/1055810406?h=a79751180c"
                         class="absolute inset-0 w-full h-full opacity-60 group-hover:opacity-100 transition-opacity"
                         frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe>
                     <div
@@ -414,17 +436,15 @@
                         Chapter</span>
                     <h3
                         class="text-2xl font-semibold text-white tracking-tight mb-4 group-hover:underline decoration-1 underline-offset-4 decoration-[#f7941d]">
-                        My new deadline: 20 years to master WebGL
+                        Rive vs. After Effects
                     </h3>
                     <p class="text-neutral-400 font-light text-sm leading-relaxed mb-8">
-                        During the first 5 years of the agency, we gave away more than $100k in free value. Here is what
-                        we learned.
+                        Choosing the right tool for your motion needs.
                     </p>
                 </div>
                 <!-- Image at Bottom -->
                 <div class="relative w-full aspect-video rounded-lg overflow-hidden border border-white/10">
-                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&amp;q=80"
-                        alt="Team Meeting"
+                    <img src="Img/blog 2.avif" alt="Team Meeting"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100">
                 </div>
             </article>
@@ -467,6 +487,32 @@
     </section>
 
 
+    <script>
+        // Mobile Menu Logic
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const closeBtn = document.getElementById('close-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        function toggleMenu() {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+                // Trigger reflow
+                void mobileMenu.offsetWidth;
+                mobileMenu.classList.remove('opacity-0');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling
+            } else {
+                mobileMenu.classList.add('opacity-0');
+                setTimeout(() => {
+                    mobileMenu.classList.add('hidden');
+                    document.body.style.overflow = ''; // Restore scrolling
+                }, 300);
+            }
+        }
+
+        if (mobileBtn) mobileBtn.addEventListener('click', toggleMenu);
+        if (closeBtn) closeBtn.addEventListener('click', toggleMenu);
+    </script>
 </body>
 
 </html>

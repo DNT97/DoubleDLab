@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="logo/favicon.svg">
-    <title>DOUBLE D | Case Study: FPT Interface</title>
+    <title>DOUBLE D | Các ấn phẩm media đã thực hiện cho VNDIRECT</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
         rel="stylesheet">
+    <script src="https://unpkg.com/@rive-app/canvas@latest"></script>
     <style>
         /* --- Core Theme & Background --- */
         body {
@@ -153,16 +154,15 @@
             <div class="flex items-center gap-2 text-[11px] uppercase tracking-widest text-[#f7941d] font-mono mb-6">
                 <a href="showcase.html" class="hover:text-white transition-colors">Showcase</a>
                 <span class="text-neutral-600">/</span>
-                <span class="text-neutral-400">Finance</span>
+                <span class="text-neutral-400">Media</span>
             </div>
 
             <!-- Title & Description -->
             <h1 class="text-4xl md:text-6xl font-bold tracking-tighter text-white mb-6 font-geist leading-[1.1]">
-                Redefining the FPT Digital Banking Experience
+                Các ấn phẩm media đã thực hiện cho VNDIRECT
             </h1>
             <p class="text-neutral-400 text-lg md:text-xl font-light leading-relaxed max-w-3xl mb-8">
-                How we utilized Rive technology and a component-driven design system to increase user engagement by 40%
-                in Q3.
+                Tổng hợp các nhóm sản phẩm media tiêu biểu và tư duy sáng tạo đứng sau mỗi ấn phẩm.
             </p>
 
             <!-- Article Meta Data -->
@@ -170,22 +170,22 @@
                 <div class="flex items-center gap-3">
                     <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&amp;q=80" alt="Author"
                         class="w-8 h-8 rounded-full border border-white/10 object-cover">
-                    <span class="text-white font-medium">Alex Morgan</span>
+                    <span class="text-white font-medium">Double D Team</span>
                 </div>
                 <div class="flex items-center gap-2">
                     <span class="iconify iconify--lucide" data-icon="lucide:calendar" width="14" height="14"></span>
-                    <span>Oct 24, 2024</span>
+                    <span>Dec 26, 2024</span>
                 </div>
                 <div class="flex items-center gap-2">
                     <span class="iconify iconify--lucide" data-icon="lucide:clock" width="14" height="14"></span>
-                    <span>8 min read</span>
+                    <span>5 min read</span>
                 </div>
                 <div class="flex items-center gap-2 ml-auto">
                     <span
-                        class="px-2 py-1 rounded bg-white/5 border border-white/10 text-[10px] uppercase tracking-wide">Interface
-                        Design</span>
+                        class="px-2 py-1 rounded bg-white/5 border border-white/10 text-[10px] uppercase tracking-wide">Media
+                        Production</span>
                     <span
-                        class="px-2 py-1 rounded bg-white/5 border border-white/10 text-[10px] uppercase tracking-wide">Motion</span>
+                        class="px-2 py-1 rounded bg-white/5 border border-white/10 text-[10px] uppercase tracking-wide">Finance</span>
                 </div>
             </div>
         </div>
@@ -195,10 +195,10 @@
     <main class="max-w-7xl mx-auto px-6 py-12">
 
         <!-- Hero Image -->
-        <div class="relative w-full aspect-[21/9] rounded-lg overflow-hidden border border-white/10 mb-16 group">
-            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1600&amp;q=80"
-                alt="FPT Interface Showcase" class="absolute inset-0 w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60">
+        <div class="relative w-full aspect-[16/9] rounded-lg overflow-hidden border border-white/10 mb-16 group">
+            <canvas id="thap-tai-san-canvas" class="absolute inset-0 w-full h-full object-cover"></canvas>
+            <div
+                class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 pointer-events-none">
             </div>
         </div>
 
@@ -207,69 +207,136 @@
             <!-- LEFT COLUMN: ARTICLE CONTENT (CMS) -->
             <article class="lg:col-span-8 article-content">
 
-                <h2 id="introduction">The Challenge</h2>
+                <h2 id="brand-video">1. Video truyền thông thương hiệu</h2>
                 <p>
-                    Financial applications often suffer from data density overload. Users are presented with tables,
-                    charts, and transaction histories that are functional but visually fatiguing. FPT approached Double
-                    D Media with a clear directive: make the complex feel simple, and make the static feel alive.
+                    Trong quá trình đồng hành cùng VNDIRECT – một trong những công ty chứng khoán hàng đầu tại Việt Nam,
+                    đội ngũ chúng tôi đã triển khai nhiều ấn phẩm media với mục tiêu truyền tải kiến thức tài chính một
+                    cách trực quan, dễ hiểu và hiện đại, đồng thời củng cố hình ảnh thương hiệu chuyên nghiệp, đáng tin
+                    cậy.
                 </p>
                 <p>
-                    The legacy system was built on a fragmented codebase where design updates took weeks to propagate.
-                    Our audit revealed inconsistency in typography, color usage, and interaction patterns across the
-                    mobile and web platforms.
+                    Bài viết này chia sẻ tổng quan các nhóm sản phẩm media tiêu biểu mà chúng tôi đã thực hiện cho
+                    VNDIRECT, cùng tư duy sáng tạo đứng sau mỗi ấn phẩm.
                 </p>
 
-                <h2 id="design-system">Building the System</h2>
                 <p>
-                    We started by establishing a core design language we called "Flux". Central to Flux was the idea
-                    that financial data flows—it doesn't just sit there. We utilized <span
-                        class="text-white font-medium">Tailwind CSS</span> for rapid utility-first styling and created a
-                    unified component library.
+                    Các video thương hiệu được xây dựng nhằm làm rõ giá trị cốt lõi, tầm nhìn và định vị của VNDIRECT
+                    trên thị trường tài chính.
                 </p>
-
-                <!-- Embedded Image/Media in Content -->
-                <figure class="my-10">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&amp;q=80"
-                        alt="Design System Grid" class="w-full rounded border border-white/10">
-                    <figcaption class="text-center text-xs text-neutral-500 mt-3 font-mono">Figure 1: The 'Flux'
-                        Component Library Structure</figcaption>
-                </figure>
-
-                <h3 id="typography">Typography &amp; Hierarchy</h3>
-                <p>
-                    Readability is paramount in fintech. We opted for <strong>Geist</strong> for headers to provide a
-                    modern, technical feel, paired with <strong>Inter</strong> for UI elements to ensure legibility at
-                    small sizes. By strictly defining line-heights and tracking, we reduced cognitive load
-                    significantly.
-                </p>
-
-                <blockquote class="text-lg">
-                    "Double D Media didn't just skin our app; they re-architected how our users perceive their own
-                    wealth. The motion design is subtle but effectively guides attention."
-                    <footer class="text-sm text-neutral-500 mt-2 not-italic">— CTO, FPT Digital</footer>
-                </blockquote>
-
-                <h2 id="implementation">Motion with Rive</h2>
-                <p>
-                    Static icons were replaced with state-driven Rive animations. When a user completes a transaction,
-                    the success state isn't just a green checkmark; it's a fluid animation that reinforces the feeling
-                    of completion. Because Rive runs on a vector runtime, these assets are 90% smaller than Lottie files
-                    and run at 60fps on low-end devices.
-                </p>
-
-                <ul class="list-disc pl-5 space-y-2 text-neutral-300">
-                    <li><strong class="text-white">Performance:</strong> Reduced bundle size by 140kb.</li>
-                    <li><strong class="text-white">Engagement:</strong> 40% increase in "Savings Goal" interactions.
-                    </li>
-                    <li><strong class="text-white">Consistency:</strong> Single animation source for iOS, Android, and
-                        Web.</li>
+                <ul>
+                    <li>Phong cách hình ảnh hiện đại, tối giản, bám sát hệ thống nhận diện thương hiệu.</li>
+                    <li>Nội dung cô đọng, tập trung vào thông điệp chính.</li>
+                    <li>Chuyển động mượt mà, nhịp dựng phù hợp với nhóm khách hàng đầu tư.</li>
                 </ul>
-
-                <h2 id="conclusion">The Outcome</h2>
                 <p>
-                    The new interface launched in Q3 2024. Within the first month, user retention increased, and support
-                    tickets regarding "navigation confusion" dropped by 22%. This project stands as a testament to the
-                    power of combining rigorous design systems with playful, purposeful motion.
+                    Những video này thường được sử dụng trên website, fanpage và trong các chiến dịch truyền thông tổng
+                    thể.
+                </p>
+
+                <div class="aspect-video rounded-lg overflow-hidden border border-white/10 bg-neutral-900 my-12">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/oRUtnUZ6eYU?si=9xXdR_0T_onJOqmX"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+
+                <h2 id="explainer-video">2. Video giải thích sản phẩm & dịch vụ</h2>
+                <p>
+                    Đối với các sản phẩm tài chính, tính rõ ràng và dễ hiểu luôn được đặt lên hàng đầu. Chúng tôi đã
+                    triển khai nhiều video dạng explainer nhằm:
+                </p>
+                <ul>
+                    <li>Giải thích tính năng các nền tảng, dịch vụ đầu tư.</li>
+                    <li>Minh họa quy trình sử dụng bằng hình ảnh và motion graphic.</li>
+                    <li>Giảm rào cản tiếp cận cho người mới tham gia thị trường.</li>
+                </ul>
+                <p>
+                    Hình thức thể hiện chủ yếu là 2D animation kết hợp UI motion, giúp người xem dễ dàng nắm bắt thông
+                    tin chỉ trong vài phút.
+                </p>
+
+                <div class="aspect-video rounded-lg overflow-hidden border border-white/10 bg-neutral-900 my-12">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/8EeVop37xJY?si=NFXW5b_aLK2quOku"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+
+                <h2 id="motion-graphic">3. Motion graphic cho báo cáo & nội dung tài chính</h2>
+                <p>
+                    Bên cạnh video, các ấn phẩm motion graphic ngắn được sử dụng để:
+                </p>
+                <ul>
+                    <li>Tóm tắt báo cáo thị trường, xu hướng đầu tư.</li>
+                    <li>Trình bày số liệu tài chính một cách trực quan.</li>
+                    <li>Tăng khả năng ghi nhớ thông tin so với nội dung tĩnh.</li>
+                </ul>
+                <p>
+                    Thiết kế tập trung vào data visualization, chuyển động tiết chế nhưng chính xác, đảm bảo tính nghiêm
+                    túc của nội dung tài chính.
+                </p>
+
+                <div class="aspect-video rounded-lg overflow-hidden border border-white/10 bg-neutral-900 my-12">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/KZktnDIzd3s?si=3UmUrb-e9M8hWy95"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+
+                <h2 id="digital-media">4. Ấn phẩm media cho nền tảng số</h2>
+                <p>
+                    Các ấn phẩm được tối ưu cho nhiều nền tảng khác nhau như:
+                </p>
+                <ul>
+                    <li>Website và landing page</li>
+                    <li>Mạng xã hội (Facebook, YouTube, nền tảng nội bộ)</li>
+                    <li>Slide thuyết trình và tài liệu truyền thông</li>
+                </ul>
+                <p>
+                    Tất cả đều được xây dựng theo cùng một tư duy: nhất quán thương hiệu – dễ tiếp cận – thân thiện với
+                    người dùng.
+                </p>
+
+                <div class="aspect-video rounded-lg overflow-hidden border border-white/10 bg-neutral-900 my-12">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/B7MCOrqyUVI?si=lzFaeoP-40JnNfZd"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+
+                <h2 id="methodology">5. Tư duy triển khai & giá trị mang lại</h2>
+                <p>
+                    Trong mỗi dự án với VNDIRECT, chúng tôi luôn bám sát 3 nguyên tắc chính:
+                </p>
+                <ol style="list-style-type: decimal; margin-left: 1.5rem; color: #d4d4d4; margin-bottom: 1.5rem;">
+                    <li style="margin-bottom: 0.5rem;">Hiểu đúng sản phẩm tài chính trước khi thiết kế.</li>
+                    <li style="margin-bottom: 0.5rem;">Đặt người xem làm trung tâm, đặc biệt là nhóm nhà đầu tư mới.
+                    </li>
+                    <li style="margin-bottom: 0.5rem;">Kết hợp sáng tạo và tính chuẩn mực, phù hợp với lĩnh vực tài
+                        chính – chứng khoán.</li>
+                </ol>
+                <p>
+                    Nhờ đó, các ấn phẩm media không chỉ đẹp về mặt hình ảnh mà còn thực sự phát huy hiệu quả truyền
+                    thông, hỗ trợ VNDIRECT trong việc giáo dục thị trường và xây dựng niềm tin với khách hàng.
+                </p>
+
+                <div class="aspect-video rounded-lg overflow-hidden border border-white/10 bg-neutral-900 my-12">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/LvQYAI0KJ-k?si=ra6nyRvcModDAJT3"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+
+                <h2 id="conclusion">Kết luận</h2>
+                <p>
+                    Hợp tác cùng VNDIRECT là cơ hội để chúng tôi tiếp cận sâu hơn với lĩnh vực tài chính và liên tục
+                    hoàn thiện năng lực sản xuất media chuyên sâu cho doanh nghiệp. Những ấn phẩm đã thực hiện là minh
+                    chứng cho cách media sáng tạo có thể đồng hành hiệu quả cùng các thương hiệu lớn trong việc truyền
+                    tải giá trị dài hạn.
+                </p>
+                <p>
+                    Nếu bạn đang tìm kiếm giải pháp media phù hợp cho lĩnh vực tài chính, đầu tư hoặc sản phẩm số, chúng
+                    tôi luôn sẵn sàng chia sẻ thêm kinh nghiệm và góc nhìn thực tế từ các dự án đã triển khai.
                 </p>
 
                 <!-- Article Footer / Author Bio -->
@@ -278,11 +345,10 @@
                         <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&amp;q=80"
                             alt="Author" class="w-12 h-12 rounded-full border border-white/10 object-cover">
                         <div>
-                            <h4 class="text-white font-bold text-sm uppercase tracking-wide">Alex Morgan</h4>
-                            <p class="text-neutral-500 text-xs uppercase tracking-widest mb-2">Lead Product Designer</p>
+                            <h4 class="text-white font-bold text-sm uppercase tracking-wide">Double D Team</h4>
+                            <p class="text-neutral-500 text-xs uppercase tracking-widest mb-2">Creative Team</p>
                             <p class="text-neutral-400 text-sm max-w-md leading-relaxed">
-                                Specializes in complex system architecture and motion design. passionate about making
-                                fintech accessible through cleaner UI.
+                                Chuyên cung cấp các giải pháp media sáng tạo cho lĩnh vực tài chính và công nghệ.
                             </p>
                         </div>
                     </div>
@@ -299,25 +365,29 @@
                         <span class="text-[10px] font-mono uppercase tracking-widest text-[#f7941d] mb-4 block">On this
                             page</span>
                         <nav class="flex flex-col space-y-3">
-                            <a href="#introduction"
+                            <a href="#brand-video"
                                 class="text-sm text-neutral-300 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center gap-2">
-                                <span class="w-1 h-1 bg-neutral-600 rounded-full"></span> The Challenge
+                                <span class="w-1 h-1 bg-neutral-600 rounded-full"></span> Video thương hiệu
                             </a>
-                            <a href="#design-system"
+                            <a href="#explainer-video"
                                 class="text-sm text-neutral-300 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center gap-2">
-                                <span class="w-1 h-1 bg-neutral-600 rounded-full"></span> Building the System
+                                <span class="w-1 h-1 bg-neutral-600 rounded-full"></span> Video giải thích
                             </a>
-                            <a href="#typography"
-                                class="text-sm text-neutral-400 hover:text-white hover:translate-x-1 transition-all duration-200 pl-4">
-                                Typography &amp; Hierarchy
-                            </a>
-                            <a href="#implementation"
+                            <a href="#motion-graphic"
                                 class="text-sm text-neutral-300 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center gap-2">
-                                <span class="w-1 h-1 bg-neutral-600 rounded-full"></span> Motion with Rive
+                                <span class="w-1 h-1 bg-neutral-600 rounded-full"></span> Motion Graphic
+                            </a>
+                            <a href="#digital-media"
+                                class="text-sm text-neutral-300 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center gap-2">
+                                <span class="w-1 h-1 bg-neutral-600 rounded-full"></span> Ấn phẩm số
+                            </a>
+                            <a href="#methodology"
+                                class="text-sm text-neutral-300 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center gap-2">
+                                <span class="w-1 h-1 bg-neutral-600 rounded-full"></span> Tư duy & Giá trị
                             </a>
                             <a href="#conclusion"
                                 class="text-sm text-neutral-300 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center gap-2">
-                                <span class="w-1 h-1 bg-neutral-600 rounded-full"></span> The Outcome
+                                <span class="w-1 h-1 bg-neutral-600 rounded-full"></span> Kết luận
                             </a>
                         </nav>
                     </div>
@@ -330,11 +400,11 @@
                         <div class="space-y-4 mb-6">
                             <div>
                                 <span class="text-xs text-neutral-500 block">Client</span>
-                                <span class="text-sm text-white font-medium">FPT Corporation</span>
+                                <span class="text-sm text-white font-medium">VNDIRECT</span>
                             </div>
                             <div>
                                 <span class="text-xs text-neutral-500 block">Services</span>
-                                <span class="text-sm text-white font-medium">UI/UX, Design System, Motion</span>
+                                <span class="text-sm text-white font-medium">Media Production, Motion Graphic</span>
                             </div>
                             <div>
                                 <span class="text-xs text-neutral-500 block">Year</span>
@@ -463,6 +533,29 @@
         </div>
     </footer>
 
+    <script>
+        // Rive Animation Setup
+        const r = new rive.Rive({
+            src: 'Rive file/thap_tai_san.riv',
+            canvas: document.getElementById('thap-tai-san-canvas'),
+            autoplay: true,
+            autoBind: true,
+            artboard: 'thap tai san',
+            stateMachines: 'State Machine 1',
+            layout: new rive.Layout({
+                fit: rive.Fit.Cover,
+                alignment: rive.Alignment.Center,
+            }),
+            onLoad: () => {
+                r.resizeDrawingSurfaceToCanvas();
+            },
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            r.resizeDrawingSurfaceToCanvas();
+        });
+    </script>
 </body>
 
 </html>
